@@ -5,15 +5,9 @@ Created on Thu Jan  7 15:03:58 2021
 """
 
 import pandas as pd
+import xlwings as xw
 
 df = pd.read_csv(r"C:\Users\Nishan\Documents\Medium\fruit_and_veg_sales.csv")
-
-
-
-
-
-
-import xlwings as xw
 
 
 wb = xw.Book()
@@ -50,6 +44,7 @@ for border_id in range(7,13):
     data_ex_headers_range.api.Borders(border_id).Weight = 2
     data_ex_headers_range.api.Borders(border_id).Color = 0xFFFFFF
 
+wb.save(r"C:\Users\Nishan\Documents\Medium\fruit_and_veg_report.xlsx")
 
 
 
