@@ -17,7 +17,6 @@ sht.name = "fruit_and_veg_sales"
 
 sht.range("A1").options(index=False).value = df
 
-
 all_data_range = sht.range("A1").expand('table')
 
 all_data_range.row_height = 22.5
@@ -43,6 +42,9 @@ data_ex_headers_range = sht.range("A2").expand('table')
 for border_id in range(7,13):
     data_ex_headers_range.api.Borders(border_id).Weight = 2
     data_ex_headers_range.api.Borders(border_id).Color = 0xFFFFFF
+
+
+sht.api.Tab.Color = 0x70AD47
 
 wb.save(r"C:\Users\Nishan\Documents\Medium\fruit_and_veg_report.xlsx")
 
